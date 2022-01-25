@@ -16,6 +16,22 @@
 </head>
 
 <body>
+    <div class="modal fade" id="albumModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="albumModalLabel">Song List</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+    </div>
 
 
 
@@ -203,23 +219,34 @@
                       <a class="nav-link text-center position-relative" href="/artist.html"><i class="bi bi-chevron-right" ></i></a>
                     </li>
                   </ul>
+
+                <button onclick="countUnique()"  type="button" class="btn btn-warning" style="height: 50px; border-radius: 25px; font-weight: bold; font-size: 1.2rem;">Unique</button>
                   
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <img src="/media/profile-picture.jpg" style="width: 20px">
-                                <span class="text-truncate">Miss Beaver</span>
+                                <img src="/media/maneskin-cover.jpg" style="width: 20px">
+                                <span class="text-truncate">Spotify</span>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                               <li><a class="dropdown-item" href="login.html">Account <span><i class="bi bi-box-arrow-up-right"></i></span></a></li>
                               <li><a class="dropdown-item" href="#">Profile</a></li>
                               <li><a class="dropdown-item" href="finish.html">Log-out</a></li>
+                              <li><a class="dropdown-item" type="button" href="#" data-bs-toggle="modal" data-bs-target="#albumModal">Song List</a></li>
                             </ul>
         
                         </div>
             </nav>
             <!-- good morning time js
             hover play button transition js,, gradient-->
+            <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+
+
 
         </div>
 
@@ -285,7 +312,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hello-card d-flex rounded" id="playcard">
+                    <div class="hello-card d-flex rounded">
                         <img class="img-fluid rounded-start" src="/media/homepage/artist_1.jpg" alt="max richter">
                         <div class="hello-card-content d-flex align-items-center w-100">
                             <p>Max Richter</p>
@@ -321,7 +348,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hello-card d-none d-xl-flex rounded" id="playcard">
+                    <div class="hello-card d-none d-xl-flex rounded">
                         <img class="img-fluid rounded-start" src="/media/homepage/artist_10.jpg" alt="llorca album">
                         <div class="hello-card-content d-flex align-items-center w-100">
                             <p>Måneskin</p>

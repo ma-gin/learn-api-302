@@ -537,7 +537,7 @@ body {
     max-height: 90px;
   }
   .hello-card p {
-    font-size: 1.1em;
+    font-size: 0.98em;
     margin-inline: 1rem;
   }
   .hello-content {
@@ -562,6 +562,10 @@ body {
     min-width: 250px;
     max-height: 100px;
   }
+    .hello-card p {
+    font-size: 1.02em;
+    margin-inline: 0.95rem;
+  }
   .hello-content {
     column-gap: 18px;
     row-gap: 14px;
@@ -575,6 +579,9 @@ body {
   .hello-card {
     min-width: 150px;
     max-height: 85px;
+  }
+  .hello-card p {
+    font-size: 1.02em;
   }
   .hello-content {
     column-gap: 22px;
