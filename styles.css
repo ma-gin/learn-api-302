@@ -512,6 +512,9 @@ body {
 .heading-description:first-child {
   font-size: 0.8em;
 }
+.effect:hover{
+  background-color: rgba(255, 31, 169, 0.342) !important;
+}
 @media (min-width: 576px) {
   #greeting {
     margin-top: 5rem;

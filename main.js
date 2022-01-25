@@ -31,6 +31,6 @@ const countUnique = () => {
       count++;
     }
   }
-  console.log(`There are ${count} unique songs displaying.`);
+  alert(`There are ${count} unique songs displaying.`);
 };
 fetchData();
