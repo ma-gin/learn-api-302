@@ -15,7 +15,7 @@ const fetchData = () => {
         title.innerText = newObj.title;
         modal.append(title);
       })
-      .catch((e) => console.log(e));
+      .catch((err) => console.log(err));
   }
 };
 const countUnique = () => {
