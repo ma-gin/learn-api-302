@@ -1,0 +1,18 @@
+.search-container{
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.card{
+    border: 1px solid hsla(0, 0%, 50%, 0.863);
+    margin: 0.5rem auto;
+    padding: 0 2rem;
+    min-width: 230px;
+    width: fit-content;
+}
+.displayDiv{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
