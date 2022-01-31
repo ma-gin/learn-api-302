@@ -1,36 +1,40 @@
-const fetchData = () => {
-  const row = document.querySelector(".hello-content");
-  for (let i = 0; i < row.children.length; i++) {
-    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem")
-      .then((response) => response.json())
-      .then((data) => {
-        const index = Math.floor(Math.random() * data.data.length);
-        const newObj = data.data[index];
-        const cover = newObj.album.cover;
-        const helloCard = document.getElementsByClassName("hello-card");
-        helloCard[i].firstElementChild.src = cover;
-        helloCard[i].querySelector("p").innerText = newObj.title;
-        const modal = document.querySelector(".modal-body");
-        const title = document.createElement("p");
-        title.innerText = newObj.title;
-        modal.append(title);
-      })
-      .catch((err) => console.log(err));
-  }
-};
-const countUnique = () => {
-  const result = [];
-  let count = 0;
-  const modal = document.querySelector(".modal-body");
-  for (let i = 0; i < modal.children.length; i++) {
-    const title = modal.children[i].innerText;
-    if (result.includes(title)) {
-      continue;
-    } else {
-      result.push(title);
-      count++;
-    }
-  }
-  alert(`There are ${count} unique songs displaying.`);
-};
-fetchData();
+const mainDiv = document.createElement('div')
+document.body.appendChild(mainDiv)
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+//   .then((response) => response.json())
+//   .then((data) => {
+
+//     data.map((element) => {
+//       const listItem = document.createElement("li")
+//         listItem.innerText = element.email
+//         mainDiv.appendChild(listItem)
+//     });
+//   });
+
+const createEmails = (data) => {
+    console.log("working")
+    data.map((element) => {
+    const listItem = document.createElement("li")
+    listItem.innerText = element.email
+    mainDiv.appendChild(listItem)
+    });
+}
+
+const getEmails = async () => {
+
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/users")
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        const test2 = await response.json()
+        console.log(typeof test2)
+        createEmails(test2)
+        return test2;
+    } catch (e) {
+        console.log(e)
+    } 
+}
+
+getEmails()
