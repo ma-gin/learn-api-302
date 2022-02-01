@@ -1,6 +1,5 @@
 const mainDiv = document.createElement("div")
 const searchInput = document.getElementById("search")
-
 let users = []
 
 searchInput.addEventListener("input", (e) => {
@@ -45,8 +44,6 @@ const getEmails = async () => {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
     const data = await response.json()
-    // console.log(data)
-    // console.log(data[0])
     generateCard(data)
   } catch (e) {
     console.log(e)
